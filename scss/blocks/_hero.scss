@@ -1,0 +1,94 @@
+.hero {
+  &__inner {
+
+    overflow: hidden;
+    position: relative;
+
+    @include vp-1023 {}
+
+
+    @include vp-767 {
+    
+    }
+  }
+
+  &__image {
+    display: block;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+
+
+
+
+  &__hotspot {
+    &:nth-child(2) {
+      left: 57%;
+      top: 14%;
+
+      @include vp-1023 {
+        left: 58%;
+        top: 15%;
+      }
+
+      @include vp-767 {
+        left: 60%;
+        top: 30%;
+      }
+
+    }
+
+    &:nth-child(3) {
+      bottom: 15%;
+      left: 18%;
+
+      @include vp-1023 {
+        bottom: 30%;
+        left: 8%
+      }
+
+      @include vp-767 {
+        bottom: 24%;
+        left: 10%;
+      }
+
+    }
+
+    &:nth-child(4) {
+      bottom: 18%;
+      left: 50%;
+
+      @include vp-1023 {
+        bottom: 30%;
+        left: 48%;
+      }
+
+      @include vp-767 {
+        bottom: 26%;
+        left: 51%;
+      }
+
+
+
+    }
+
+    &:nth-child(5) {
+      bottom: 21%;
+      right: 27%;
+
+      @include vp-1023 {
+        bottom: 32%;
+        right: 21%;
+      }
+
+
+      @include vp-767 {
+        bottom: 26%;
+        right: 17%;
+      }
+
+    }
+  }
+}

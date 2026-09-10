@@ -1,0 +1,32 @@
+.hotspot {
+  align-items: center;
+  background-color: $color-white;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  height: 64px;
+  justify-content: center;
+  position: absolute;
+  width: 64px;
+
+  @include vp-1023 {
+    height: 50px;
+    width: 50px;
+  }
+
+  @include vp-767 {
+    height: 32px;
+    width: 32px;
+  }
+
+  &__icon {
+    color: $color-bokara-grey;
+    height: 20px;
+    width: 20px;
+
+    @include vp-767 {
+      height: 16px;
+      width: 16px;
+    }
+  }
+}

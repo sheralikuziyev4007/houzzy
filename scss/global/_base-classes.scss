@@ -1,0 +1,78 @@
+// Кнопка тёмная (заливка)
+.button-primary {
+  align-items: center;
+  background-color: $color-bokara-grey;
+  border: 1px solid $color-bokara-grey;
+  color: $color-white;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: $ff-mulish;
+  font-size: 14px;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 18px;
+  padding: 18px 83px;
+  text-align: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+
+  @include vp-767 {
+      font-size: 12px;
+      padding: 16px 97px;
+    }
+  &:hover,
+  &:focus-visible {
+    background-color: $color-loafer;
+    border-color: $color-loafer;
+    color: $color-bokara-grey;
+  }
+}
+
+// Кнопка светлая (контурная)
+.button-secondary {
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid $color-swiss-coffee;
+  color: $color-bokara-grey;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: $ff-mulish;
+  font-size: 14px;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 18px;
+  padding: 20px 56px;
+  text-align: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+
+   @include vp-1023 {
+      font-size: 12px;
+      line-height: 16px;
+    }
+    @include vp-767 {
+       padding: 20px 46px;
+        font-size: 10px;
+    }
+  &:hover,
+  &:focus-visible {
+    background-color: $color-loafer;
+    border-color: $color-loafer;
+  }
+}
+
+// Заголовок раздела
+.section-title {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 48px;
+  margin: 0;
+
+  @include vp-1023 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  @include vp-767 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}

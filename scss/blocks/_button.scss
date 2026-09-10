@@ -1,0 +1,12 @@
+.button {
+  @extend .button-primary;
+  border-radius: 0;
+
+  &--secondary {
+    @extend .button-secondary;
+  }
+
+  &--full {
+    width: 100%;
+  }
+}
