@@ -1,0 +1,48 @@
+@mixin vp-1023 {
+  @media (max-width: $vp-tablet) {
+    @content;
+  }
+}
+
+@mixin vp-767 {
+  @media (max-width: $vp-mobile) {
+    @content;
+  }
+}
+
+// Обрезка текста по строкам
+@mixin line-clamp($lines) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  overflow: hidden;
+}
+
+// Вариант кнопки: primary (заливка) или secondary (контур).
+// Если $border не передан — берётся равным $bg (примитивный @if/@else).
+@mixin button-variant($bg, $color, $border: null) {
+  $resolved-border: $border;
+
+  @if $resolved-border == null {
+    $resolved-border: $bg;
+  }
+
+  background-color: $bg;
+  border: 1px solid $resolved-border;
+  color: $color;
+
+  @if $bg == transparent {
+    &:hover,
+    &:focus-visible {
+      background-color: $color-loafer;
+      border-color: $color-loafer;
+    }
+  } @else {
+    &:hover,
+    &:focus-visible {
+      background-color: $color-loafer;
+      border-color: $color-loafer;
+      color: $color-bokara-grey;
+    }
+  }
+}

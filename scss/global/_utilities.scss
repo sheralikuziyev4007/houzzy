@@ -1,0 +1,35 @@
+// ------------------------------------------------------------
+// Utility-классы для отступов, сгенерированные из карты
+// $spacers (см. global/_variables.scss) через @each.
+//
+// Пример использования в разметке:
+//   <div class="mt-5 mb-3">...</div>  →  margin-top: 24px; margin-bottom: 12px;
+//
+// Список генерируемых классов:
+//   .m{t|b|l|r}-{0..8}  — margin по одной стороне
+//   .p{t|b|l|r}-{0..8}  — padding по одной стороне
+//   .gap-{0..8}         — gap (для flex/grid контейнеров)
+// ------------------------------------------------------------
+
+$spacing-sides: (
+  "t": "top",
+  "b": "bottom",
+  "l": "left",
+  "r": "right",
+);
+
+@each $key, $value in $spacers {
+  @each $side-short, $side-full in $spacing-sides {
+    .m#{$side-short}-#{$key} {
+      margin-#{$side-full}: $value;
+    }
+
+    .p#{$side-short}-#{$key} {
+      padding-#{$side-full}: $value;
+    }
+  }
+
+  .gap-#{$key} {
+    gap: $value;
+  }
+}

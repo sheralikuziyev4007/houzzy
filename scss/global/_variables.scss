@@ -1,0 +1,70 @@
+// ------------------------------------------------------------
+// Карта цветов
+// Единый источник правды: значения ниже — просто "ярлыки"
+// для удобного использования в блоках (без map-get() на каждом шагу)
+// ------------------------------------------------------------
+
+$colors: (
+  "white": #ffffff,
+  "black": #000000,
+  "bokara-grey": #141211,
+  "hint-of-red": #f4f3f2,
+  "swiss-coffee": #d7cfcb,
+  "cloudy": #aea29a,
+  "moon-mist": #c8c8b6,
+  "bokara-grey-40": rgba(20, 18, 17, 0.4),
+  "loafer": #deded2,
+  "loafer-dark": #78786f,
+  "mercury": #141211,
+  "red": #e80e0a,
+  "alto": #ede9e8,
+);
+
+$color-white: map-get($colors, "white");
+$color-black: map-get($colors, "black");
+$color-bokara-grey: map-get($colors, "bokara-grey");
+$color-hint-of-red: map-get($colors, "hint-of-red");
+$color-swiss-coffee: map-get($colors, "swiss-coffee");
+$color-cloudy: map-get($colors, "cloudy");
+$color-moon-mist: map-get($colors, "moon-mist");
+$color-bokara-grey-40: map-get($colors, "bokara-grey-40");
+$color-loafer: map-get($colors, "loafer");
+$color-loafer-dark: map-get($colors, "loafer-dark");
+$color-mercury: map-get($colors, "mercury");
+$color-red: map-get($colors, "red");
+$color-alto: map-get($colors, "alto");
+
+// ------------------------------------------------------------
+// Typography
+// ------------------------------------------------------------
+
+$ff-mulish: "Mulish", "Arial", sans-serif;
+
+// ------------------------------------------------------------
+// Карта брейкпоинтов
+// ------------------------------------------------------------
+
+$breakpoints: (
+  "tablet": 1023px,
+  "mobile": 767px,
+);
+
+$vp-tablet: map-get($breakpoints, "tablet");
+$vp-mobile: map-get($breakpoints, "mobile");
+
+// ------------------------------------------------------------
+// Карта отступов (используется в scss/global/_utilities.scss
+// для автогенерации утилитных классов через @each)
+// ------------------------------------------------------------
+
+$spacers: (
+  0: 0,
+  1: 4px,
+  2: 8px,
+  3: 12px,
+  4: 16px,
+  5: 24px,
+  6: 32px,
+  7: 48px,
+  8: 64px,
+);

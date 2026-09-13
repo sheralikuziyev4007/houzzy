@@ -1,0 +1,71 @@
+// ------------------------------------------------------------
+// Попап с информацией о товаре, который открывается по клику
+// на .hotspot. Один общий элемент в конце body, JS выставляет
+// координаты через position: fixed (не зависит от overflow:
+// hidden у .hero__inner / .interior__gallery).
+// ------------------------------------------------------------
+
+.hotspot-popup {
+  background-color: $color-white;
+  border-radius: 8px;
+  box-shadow: 0 12px 32px $color-bokara-grey-40;
+  max-width: 220px;
+  opacity: 0;
+  padding: 16px 20px;
+  pointer-events: none;
+  position: fixed;
+  transform: translateY(4px) scale(0.98);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 20;
+
+  &.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+  }
+
+  &--above {
+    transform: translateY(-100%) translateY(-4px) scale(0.98);
+
+    &.is-open {
+      transform: translateY(-100%) translateY(-4px) scale(1);
+    }
+  }
+
+  &__close {
+    align-items: center;
+    color: $color-loafer-dark;
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    transition: color 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-bokara-grey;
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    margin: 0 24px 4px 0;
+  }
+
+  &__price {
+    color: $color-loafer-dark;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 0 0 12px;
+  }
+
+  &__link {
+    @extend .button-secondary;
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+}

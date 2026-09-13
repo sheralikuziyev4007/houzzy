@@ -1,0 +1,138 @@
+.popular {
+  padding: 120px 0 40px;
+
+  @include vp-1023 {
+    padding: 60px 0 49px;
+  }
+
+  @include vp-767 {
+    padding: 0 0 40px;
+  }
+
+  &__title {
+    @extend .section-title;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: -3.6%;
+    margin: 0;
+
+    margin: 0 0 40px;
+
+    @include vp-1023 {
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 36px;
+      line-height: 40px;
+    }
+
+    @include vp-767 {
+      font-size: 26px;
+      line-height: 32px;
+      letter-spacing: -4%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include vp-1023 {
+      grid-auto-columns: 228px;
+      grid-auto-flow: column;
+      grid-template-columns: none;
+      margin: 0 -30px;
+      overflow-x: auto;
+      padding: 0 30px 10px;
+      scroll-padding-left: 30px;
+      scrollbar-width: thin;
+      gap: 12px;
+    }
+
+    @include vp-767 {
+      grid-auto-columns: 155px;
+      margin: 0 -20px;
+      padding: 0 20px 10px;
+      scroll-padding-left: 20px;
+      gap: 10px;
+    }
+  }
+
+  &__item {
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      aspect-ratio: 338 / 280;
+      @include vp-1023 {
+        aspect-ratio: 338 / 471;
+        grid-column: auto;
+      }
+      @include vp-767 {
+        aspect-ratio: 155 / 220;
+        
+      }
+      
+    }
+
+    &:nth-child(5),
+    &:nth-child(6) {
+      aspect-ratio: 692 / 240;
+      grid-column: span 2;
+
+       @include vp-1023 {
+        aspect-ratio: 338 / 471;
+        grid-column: auto;
+      }
+      @include vp-767 {
+        aspect-ratio: 155 / 220;
+        
+      }
+    }
+
+  
+  }
+
+  &__link {
+    color: $color-white;
+    display: block;
+    height: 100%;
+    position: relative;
+    width: 100%;
+  }
+
+  &__image {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.2s ease;
+    width: 100%;
+
+    .popular__link:hover &,
+    .popular__link:focus-visible & {
+      opacity: 0.85;
+    }
+  }
+
+  &__name {
+    font-size: 24px;
+    font-weight: 500;
+    left: 50%;
+    line-height: 28px;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    white-space: nowrap;
+
+    @include vp-767 {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}

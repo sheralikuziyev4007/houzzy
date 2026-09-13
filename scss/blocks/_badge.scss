@@ -1,0 +1,24 @@
+.badge {
+  align-items: center;
+  background-color: $color-loafer;
+  border-radius: 50%;
+  color: $color-bokara-grey;
+  display: flex;
+  font-size: 10px;
+  font-weight: 700;
+  height: 16px;
+  justify-content: center;
+  line-height: 1;
+  pointer-events: none;
+  position: absolute;
+  right: -8px;
+  top: -6px;
+  width: 16px;
+
+  @include vp-1023 {
+    height: 14px;
+    right: -6px;
+    top: -5px;
+    width: 14px;
+  }
+}

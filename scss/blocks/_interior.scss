@@ -1,0 +1,131 @@
+.interior {
+  padding: 80px 0 112px;
+
+  @include vp-1023 {
+    padding: 0 0 53px;
+  }
+
+  @include vp-767 {
+    padding: 0 0 50px;
+  }
+
+  &__title {
+    @extend .section-title;
+    font-size: 48px;
+    letter-spacing: -3.6%;
+    line-height: 56px;
+    margin: 0 0 40px;
+
+    @include vp-1023 {
+      margin-bottom: 32px;
+      font-size: 36px;
+      text-align: center;
+      line-height: 40px;
+
+    }
+
+    @include vp-767 {
+      margin-bottom: 20px;
+      font-size: 26px;
+      line-height: 32px;
+    }
+  }
+
+  &__grid {
+    align-items: start;
+    display: grid;
+    gap: 58px;
+    grid-template-columns: 1fr 440px;
+
+    @include vp-1023 {
+      grid-template-columns: 1fr;
+      gap: 41px;
+    }
+    @include vp-767 {
+      gap: 28px;
+    }
+
+  }
+
+  &__gallery {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    
+  }
+
+  &__image {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+
+    @include vp-1023 {
+      height: auto;
+    }
+   
+
+  }
+
+  &__hotspot {
+    &:nth-child(2) {
+      left: 9%;
+      top: 57%;
+
+      @include vp-1023 {
+        left: 14%;
+        top: 58%;
+      }
+
+      @include vp-767 {
+        left: 8%;
+        top: 57%;
+      }
+    }
+
+    &:nth-child(3) {
+      left: 49%;
+      bottom: 24%;
+
+      @include vp-1023 {
+        bottom: 22%;
+      }
+
+      @include vp-767 {
+        bottom: 22%;
+        left: 47%;
+      }
+    }
+
+    &:nth-child(4) {
+      right: 17%;
+      top: 28%;
+
+      @include vp-1023 {
+        right: 21%;
+        top: 27%;
+      }
+
+      @include vp-767 {
+        right: 17%;
+        top: 26%;
+      }
+    }
+
+    &:nth-child(5) {
+      right: 25%;
+      bottom: 29%;
+
+      @include vp-1023 {
+        right: 28%;
+        bottom: 26%;
+      }
+
+      @include vp-767 {
+        right: 24%;
+        bottom: 26%;
+      }
+    }
+  }
+}

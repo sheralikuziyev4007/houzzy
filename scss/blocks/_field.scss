@@ -1,0 +1,68 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+
+  &__label {
+    color: $color-loafer-dark;
+    font-size: 14px;
+    line-height: 18px;
+
+    @include vp-1023 {
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+
+  }
+
+  &__input {
+    background-color: transparent;
+    border: 1px solid $color-mercury;
+    color: $color-bokara-grey;
+    font-family: $ff-mulish;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 17px 20px;
+    transition: border-color 0.2s ease;
+    width: 100%;
+
+    @include vp-1023 {
+      padding: 21px 20px;
+    }
+
+    @include vp-767 {
+       padding: 17px 20px;
+    }
+
+    &::placeholder {
+      color: $color-cloudy;
+    }
+
+    &:hover {
+      border-color: $color-bokara-grey;
+    }
+
+    &:focus-visible {
+      border-color: $color-bokara-grey;
+      outline: 2px solid $color-bokara-grey;
+      outline-offset: 2px;
+    }
+  }
+
+  &--error &__input {
+    border-color: $color-red;
+
+    &:hover,
+    &:focus-visible {
+      border-color: $color-red;
+    }
+  }
+
+  &__error {
+    color: $color-red;
+    font-size: 13px;
+    line-height: 16px;
+  }
+}

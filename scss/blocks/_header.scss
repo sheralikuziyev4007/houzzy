@@ -1,0 +1,176 @@
+.header {
+  background-color: $color-hint-of-red;
+  border-bottom: 1px solid $color-swiss-coffee;
+  left: 0;
+  padding: 15px 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  $root: &;
+
+  @include vp-1023 {
+    padding: 18px 0 17px;
+  }
+
+  @include vp-767 {
+    padding: 14px 0 13px;
+  }
+
+  &--open {
+    @include vp-1023 {
+      .main-nav {
+        display: flex;
+      }
+
+      #{$root}__burger {
+        display: none;
+
+        &--close {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__content {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__logo-link {
+    align-items: center;
+    display: flex;
+    margin: 0 50px 0 0;
+
+    @include vp-1023 {
+      margin: 0;
+    }
+  }
+
+  &__logo-icon {
+    align-self: flex-start;
+    border-radius: 6px;
+    flex-shrink: 0;
+    height: 40px;
+    width: 110px;
+
+    @include vp-1023 {
+      height: 36px;
+      width: 100px;
+    }
+
+    @include vp-767 {
+      height: 32px;
+      width: 90px;
+    }
+  }
+
+  &__burger-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    height: 24px;
+    left: 50%;
+    padding: 0;
+    position: absolute;
+    top: 45%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 24px;
+
+    @include vp-1023 {
+      display: block;
+    }
+
+    &:hover,
+    &:focus-visible {
+      opacity: 0.7;
+    }
+  }
+
+  &__burger {
+    color: $color-bokara-grey;
+    height: 24px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 24px;
+
+    &--close {
+      display: none;
+    }
+  }
+
+  &__user-list {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 160px;
+
+    @include vp-1023 {
+      width: 120px;
+    }
+
+    @include vp-767 {
+      gap: 5px 15px;
+    }
+  }
+
+  &__user-item {
+    align-items: center;
+    display: flex;
+
+    &--phone {
+      @include vp-1023 {
+        display: none;
+      }
+    }
+  }
+
+  &__user-link {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: $color-bokara-grey;
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    height: 24px;
+    justify-content: center;
+    padding: 0;
+    position: relative;
+    width: 24px;
+
+    @include vp-1023 {
+      height: 20px;
+      width: 20px;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: $color-moon-mist;
+    }
+  }
+
+  &__user-icon {
+    height: 24px;
+    pointer-events: none;
+    width: 24px;
+
+    @include vp-1023 {
+      height: 20px;
+      width: 20px;
+    }
+  }
+}
+
