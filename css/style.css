@@ -1106,6 +1106,7 @@ button {
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
+  padding: 1px;
 }
 @media (max-width: 1023px) {
   .main-nav__link {
