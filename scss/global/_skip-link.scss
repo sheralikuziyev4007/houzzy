@@ -1,0 +1,27 @@
+// ------------------------------------------------------------
+// Skip-link — доступность для клавиатурной навигации: позволяет
+// сразу перейти к основному содержимому, минуя шапку и меню.
+// Визуально скрыта, появляется только при фокусе (Tab).
+// ------------------------------------------------------------
+
+.skip-link {
+  background-color: $color-white;
+  border-radius: 0 0 6px 0;
+  color: $color-bokara-grey;
+  font-family: $ff-mulish;
+  font-size: 14px;
+  font-weight: 600;
+  left: 0;
+  padding: 12px 20px;
+  position: fixed;
+  top: 0;
+  transform: translateY(-100%);
+  transition: transform 0.2s ease;
+  z-index: 999;
+
+  &:focus {
+    outline: 2px solid $color-bokara-grey;
+    outline-offset: -2px;
+    transform: translateY(0);
+  }
+}

@@ -10,6 +10,7 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
   <header class="header" id="header">
     <div class="container">
       <div class="header__content">
@@ -49,6 +50,25 @@
             8 (800) 000-00-00
           </a>
         </nav>
+        <button class="theme-toggle" type="button" id="theme-toggle" aria-pressed="false"
+          aria-label="Включить тёмную тему">
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" width="20" height="20" viewBox="0 0 20 20"
+            fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <circle cx="10" cy="10" r="4"></circle>
+            <line x1="10" y1="1" x2="10" y2="3"></line>
+            <line x1="10" y1="17" x2="10" y2="19"></line>
+            <line x1="1" y1="10" x2="3" y2="10"></line>
+            <line x1="17" y1="10" x2="19" y2="10"></line>
+            <line x1="3.5" y1="3.5" x2="5" y2="5"></line>
+            <line x1="15" y1="15" x2="16.5" y2="16.5"></line>
+            <line x1="3.5" y1="16.5" x2="5" y2="15"></line>
+            <line x1="15" y1="5" x2="16.5" y2="3.5"></line>
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" width="20" height="20" viewBox="0 0 20 20"
+            fill="currentColor" aria-hidden="true">
+            <path d="M17.5 12.7A7.3 7.3 0 0 1 7.3 2.5a7.3 7.3 0 1 0 10.2 10.2z"></path>
+          </svg>
+        </button>
         <button class="header__burger-btn" type="button" id="burger-btn" aria-label="Открыть меню" aria-expanded="false"
           aria-controls="main-nav">
           <svg class="header__burger" width="24" height="24" aria-hidden="true">
@@ -93,7 +113,7 @@
       </div>
     </div>
   </header>
-  <main>
+  <main id="main-content">
     <h1 class="visually-hidden">Houzzy — мебель и декор для комфортного дома</h1>
 
     <section class="hero">
@@ -104,22 +124,30 @@
           <img class="hero__image" src="images/content/hero.jpg" srcset="images/content/hero@2x.jpg 2x"
             alt="Уютная гостиная с диваном, декоративными зеркалами и торшером" width="1920" height="828">
         </picture>
-        <button class="hotspot hero__hotspot" type="button" aria-label="Показать детали">
+        <button class="hotspot hero__hotspot" type="button" aria-haspopup="true" aria-expanded="false"
+          aria-controls="hotspot-popup" aria-label="Показать детали: Торшер Arc" data-hotspot-title="Торшер Arc"
+          data-hotspot-price="12 400 руб.">
           <svg class="hotspot__icon" width="20" height="20" aria-hidden="true">
             <use xlink:href="images/sprite.svg#icon-plus"></use>
           </svg>
         </button>
-        <button class="hotspot hero__hotspot" type="button" aria-label="Показать детали">
+        <button class="hotspot hero__hotspot" type="button" aria-haspopup="true" aria-expanded="false"
+          aria-controls="hotspot-popup" aria-label="Показать детали: Диван Milano" data-hotspot-title="Диван Milano"
+          data-hotspot-price="89 900 руб.">
           <svg class="hotspot__icon" width="20" height="20" aria-hidden="true">
             <use xlink:href="images/sprite.svg#icon-plus"></use>
           </svg>
         </button>
-        <button class="hotspot hero__hotspot" type="button" aria-label="Показать детали">
+        <button class="hotspot hero__hotspot" type="button" aria-haspopup="true" aria-expanded="false"
+          aria-controls="hotspot-popup" aria-label="Показать детали: Зеркало Round" data-hotspot-title="Зеркало Round"
+          data-hotspot-price="7 300 руб.">
           <svg class="hotspot__icon" width="20" height="20" aria-hidden="true">
             <use xlink:href="images/sprite.svg#icon-plus"></use>
           </svg>
         </button>
-        <button class="hotspot hero__hotspot" type="button" aria-label="Показать детали">
+        <button class="hotspot hero__hotspot" type="button" aria-haspopup="true" aria-expanded="false"
+          aria-controls="hotspot-popup" aria-label="Показать детали: Плед Wool" data-hotspot-title="Плед Wool"
+          data-hotspot-price="3 100 руб.">
           <svg class="hotspot__icon" width="20" height="20" aria-hidden="true">
             <use xlink:href="images/sprite.svg#icon-plus"></use>
           </svg>
@@ -162,7 +190,7 @@
 
           </div>
           <div class="about__content">
-            <h2 class="about__title">Комфортабельный</h2>
+            <h2 class="about__title reveal">Комфортабельный</h2>
             <p class="about__text">
               Houzzy&nbsp;&mdash; это место, где каждая деталь создана с&nbsp;любовью и&nbsp;заботой, чтобы принести
               тепло и&nbsp;уют в&nbsp;ваш дом. Мы&nbsp;уверены, что красивая и&nbsp;комфортабельная мебель способна
@@ -179,7 +207,7 @@
       <div class="container">
         <div class="banner__inner">
           <div class="banner__text">
-            <h2 class="banner__title">Уютный</h2>
+            <h2 class="banner__title reveal">Уютный</h2>
             <p class="banner__subtitle">для вашего дома</p>
           </div>
           <a class="button banner__link" href="#">Подробнее</a>
@@ -189,7 +217,7 @@
 
     <section class="popular">
       <div class="container">
-        <h2 class="popular__title">Популярный</h2>
+        <h2 class="popular__title reveal">Популярный</h2>
       </div>
       <div class="container">
         <ul class="popular__list">
@@ -265,7 +293,7 @@
 
     <section class="interior">
       <div class="container">
-        <h2 class="interior__title">Интерьерный</h2>
+        <h2 class="interior__title reveal">Интерьерный</h2>
         <div class="interior__grid">
           <div class="interior__gallery">
             <picture>
@@ -275,22 +303,30 @@
                 alt="Гостиная в зелёных тонах с креслом и комодом" width="900" height="748">
             </picture>
 
-            <button class="hotspot interior__hotspot" type="button" aria-label="Показать детали">
+            <button class="hotspot interior__hotspot" type="button" aria-haspopup="true" aria-expanded="false"
+              aria-controls="hotspot-popup" aria-label="Показать детали: Кресло Loft" data-hotspot-title="Кресло Loft"
+              data-hotspot-price="24 800 руб.">
               <svg class="hotspot__icon" width="20" height="20" aria-hidden="true">
                 <use xlink:href="images/sprite.svg#icon-plus"></use>
               </svg>
             </button>
-            <button class="hotspot interior__hotspot" type="button" aria-label="Показать детали">
+            <button class="hotspot interior__hotspot" type="button" aria-haspopup="true" aria-expanded="false"
+              aria-controls="hotspot-popup" aria-label="Показать детали: Тумба Wood" data-hotspot-title="Тумба Wood"
+              data-hotspot-price="2 600 руб.">
               <svg class="hotspot__icon" width="20" height="20" aria-hidden="true">
                 <use xlink:href="images/sprite.svg#icon-plus"></use>
               </svg>
             </button>
-            <button class="hotspot interior__hotspot" type="button" aria-label="Показать детали">
+            <button class="hotspot interior__hotspot" type="button" aria-haspopup="true" aria-expanded="false"
+              aria-controls="hotspot-popup" aria-label="Показать детали: Ваза Terra" data-hotspot-title="Ваза Terra"
+              data-hotspot-price="1 950 руб.">
               <svg class="hotspot__icon" width="20" height="20" aria-hidden="true">
                 <use xlink:href="images/sprite.svg#icon-plus"></use>
               </svg>
             </button>
-            <button class="hotspot interior__hotspot" type="button" aria-label="Показать детали">
+            <button class="hotspot interior__hotspot" type="button" aria-haspopup="true" aria-expanded="false"
+              aria-controls="hotspot-popup" aria-label="Показать детали: Полка Line" data-hotspot-title="Полка Line"
+              data-hotspot-price="5 400 руб.">
               <svg class="hotspot__icon" width="20" height="20" aria-hidden="true">
                 <use xlink:href="images/sprite.svg#icon-plus"></use>
               </svg>
@@ -298,7 +334,7 @@
           </div>
           <ul class="product-list">
             <li>
-              <article class="product-card">
+              <article class="product-card reveal">
                 <span class="product-card__image-wrapper">
                   <picture>
                     <source media="(max-width: 767px)" srcset="images/content/product-chair-mobile.jpg">
@@ -313,7 +349,7 @@
               </article>
             </li>
             <li>
-              <article class="product-card">
+              <article class="product-card reveal">
                 <span class="product-card__image-wrapper">
                   <picture>
                     <source media="(max-width: 767px)" srcset="images/content/product-lamp-mobile.jpg">
@@ -328,7 +364,7 @@
               </article>
             </li>
             <li>
-              <article class="product-card">
+              <article class="product-card reveal">
                 <span class="product-card__image-wrapper">
                   <picture>
                     <source media="(max-width: 767px)" srcset="images/content/product-chest-mobile.jpg">
@@ -343,7 +379,7 @@
               </article>
             </li>
             <li>
-              <article class="product-card">
+              <article class="product-card reveal">
                 <span class="product-card__image-wrapper">
                   <picture>
                     <source media="(max-width: 767px)" srcset="images/content/product-stool-mobile.jpg">
@@ -366,17 +402,19 @@
       <div class="container">
         <h2 class="consult__title">Помощь в выборе товаров</h2>
         <p class="consult__subtitle">Получите бесплатную консультацию менеджера</p>
-        <form class="consult__form" action="#" method="post">
+        <form class="consult__form" action="#" method="post" novalidate>
           <div class="consult__fields">
             <div class="field consult__field">
               <label class="field__label" for="consult-name">Имя</label>
               <input class="field__input" type="text" name="name" id="consult-name" placeholder="Имя"
-                autocomplete="name" required>
+                autocomplete="name" aria-describedby="consult-name-error" aria-invalid="false" required>
+              <p class="field__error" id="consult-name-error" role="alert" hidden></p>
             </div>
             <div class="field consult__field">
               <label class="field__label" for="consult-phone">Телефон</label>
               <input class="field__input" type="tel" name="phone" id="consult-phone" placeholder="+7 (___) ___-__-__"
-                autocomplete="tel" required>
+                autocomplete="tel" aria-describedby="consult-phone-error" aria-invalid="false" required>
+              <p class="field__error" id="consult-phone-error" role="alert" hidden></p>
             </div>
             <button class="button consult__submit" type="submit">Отправить</button>
           </div>
@@ -487,6 +525,19 @@
       </div>
     </div>
   </footer>
+
+  <div class="hotspot-popup" id="hotspot-popup" role="dialog" aria-modal="false"
+    aria-labelledby="hotspot-popup-title" hidden>
+    <button class="hotspot-popup__close" type="button" aria-label="Закрыть подсказку">
+      <svg width="14" height="14" aria-hidden="true">
+        <use xlink:href="images/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+    <p class="hotspot-popup__title" id="hotspot-popup-title"></p>
+    <p class="hotspot-popup__price"></p>
+    <a class="hotspot-popup__link" href="#">Подробнее</a>
+  </div>
+
   <script src="js/script.js" defer></script>
 </body>
 

@@ -1,6 +1,6 @@
 .header {
-  background-color: $color-hint-of-red;
-  border-bottom: 1px solid $color-swiss-coffee;
+  background-color: var(--color-bg, #{$color-hint-of-red});
+  border-bottom: 1px solid var(--color-border, #{$color-swiss-coffee});
   left: 0;
   padding: 15px 0;
   position: fixed;

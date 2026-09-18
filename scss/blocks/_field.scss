@@ -20,7 +20,7 @@
   &__input {
     background-color: transparent;
     border: 1px solid $color-mercury;
-    color: $color-bokara-grey;
+    color: var(--color-text, #{$color-bokara-grey});
     font-family: $ff-mulish;
     font-size: 16px;
     line-height: 20px;
@@ -46,7 +46,8 @@
 
     &:focus-visible {
       border-color: $color-bokara-grey;
-      outline: none;
+      outline: 2px solid $color-bokara-grey;
+      outline-offset: 2px;
     }
   }
 

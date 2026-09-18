@@ -21,7 +21,19 @@
 
 - **HTML5** — семантическая вёрстка
 - **SCSS** — стили написаны по методологии BEM, разбиты на модули (`scss/blocks`, `scss/global`)
-- **Vanilla JavaScript** — управление бургер-меню и состоянием хедера (`js/script.js`)
+  - `global/_variables.scss` — цвета, брейкпоинты и отступы вынесены в SCSS-карты (`$colors`, `$breakpoints`, `$spacers`); существующие переменные (`$color-white` и т.д.) получаются через `map-get()`, чтобы не переписывать остальной код
+  - `global/_functions.scss` — функция `rem()` для перевода px → rem
+  - `global/_mixins.scss` — миксин `button-variant()` с условной логикой (`@if/@else`) для вариантов кнопок
+  - `global/_animations.scss` — `@keyframes fade-in-up` и класс `.reveal`/`.is-visible` для scroll-анимации (уважает `prefers-reduced-motion`)
+  - `global/_theme.scss` — CSS custom properties (`--color-bg`, `--color-text` и т.д.) для переключения светлой/тёмной темы в рантайме, без пересборки CSS
+- **Тёмная тема** — переключатель в шапке (`#theme-toggle`), сохраняется в `localStorage`, по умолчанию учитывает `prefers-color-scheme`
+- **Scroll-анимация** — заголовки разделов и карточки товаров плавно появляются при прокрутке (`IntersectionObserver` в `js/script.js`)
+- **Vanilla JavaScript** — управление бургер-меню, попапом hotspot-точек и доступной валидацией формы (`js/script.js`)
+- **Доступность (a11y)**:
+  - hotspot-точки — интерактивный попап с названием и ценой товара, управление с клавиатуры (Tab, Enter, Esc), `aria-expanded`/`aria-haspopup`
+  - skip-link для перехода к основному содержимому по Tab
+  - форма консультации — ошибки связаны с полями через `aria-describedby`/`aria-invalid`, озвучиваются через `role="alert"`
+  - видимый фокус (`:focus-visible`) на полях ввода вместо `outline: none`
 - **SVG-спрайт** — все иконки оптимизированы в `images/sprite.svg`
 - **Адаптивная вёрстка** — под мобильные устройства, планшеты и десктоп (варианты изображений `@2x`, `-mobile`, `-tablet`)
 - Шрифт: **Mulish** (woff/woff2)

@@ -1,0 +1,44 @@
+// ------------------------------------------------------------
+// Кнопка переключения светлой/тёмной темы. Две SVG-иконки
+// (солнце/луна) лежат друг на друге, видимость переключается
+// по атрибуту [data-theme] на <html> — так же, как burger/close
+// в .header__burger.
+// ------------------------------------------------------------
+
+.theme-toggle {
+  align-items: center;
+  color: var(--color-text, #{$color-bokara-grey});
+  display: flex;
+  flex-shrink: 0;
+  height: 40px;
+  justify-content: center;
+  position: relative;
+  width: 40px;
+
+  &__icon {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+
+    &--moon {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.6) rotate(-30deg);
+    }
+  }
+}
+
+// [data-theme="dark"] задаётся на <html>, то есть выше .theme-toggle
+// по дереву — управлять видимостью иконок через родительский
+// селектор внутри &-вложенности нельзя, поэтому переключение
+// иконок вынесено в отдельные плоские правила:
+[data-theme="dark"] .theme-toggle__icon--sun {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.6) rotate(30deg);
+}
+
+[data-theme="dark"] .theme-toggle__icon--moon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1) rotate(0);
+}
