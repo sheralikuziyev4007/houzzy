@@ -1,12 +1,23 @@
-<!DOCTYPE html>
+~<!DOCTYPE html>
 <html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="css/style.css">
+  </noscript>
   <title>Главная страница - Houzzy</title>
+  <link rel="preload" href="fonts/mulish-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/mulish-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/mulish-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="images/content/hero-mobile.webp" media="(max-width: 767px)" fetchpriority="high">
+  <link rel="preload" as="image" href="images/content/hero-tablet.webp" media="(max-width: 1023px)"
+    fetchpriority="high">
+  <link rel="preload" as="image" href="images/content/hero.webp" imagesrcset="images/content/hero@2x.webp 2x"
+    fetchpriority="high">
 </head>
 
 <body>
@@ -121,10 +132,11 @@
     <section class="hero">
       <div class="hero__inner">
         <picture>
-          <source media="(max-width: 767px)" srcset="images/content/hero-mobile.jpg">
-          <source media="(max-width: 1023px)" srcset="images/content/hero-tablet.jpg">
-          <img class="hero__image" src="images/content/hero.jpg" srcset="images/content/hero@2x.jpg 2x"
-            alt="Уютная гостиная с диваном, декоративными зеркалами и торшером" width="1920" height="828">
+          <source media="(max-width: 767px)" srcset="images/content/hero-mobile.webp">
+          <source media="(max-width: 1023px)" srcset="images/content/hero-tablet.webp">
+          <img class="hero__image" src="images/content/hero.webp" srcset="images/content/hero@2x.webp 2x"
+            alt="Уютная гостиная с диваном, декоративными зеркалами и торшером" width="1920" height="828"
+            fetchpriority="high" decoding="async">
         </picture>
         <button class="hotspot hero__hotspot" type="button" aria-haspopup="true" aria-expanded="false"
           aria-controls="hotspot-popup" aria-label="Показать детали: Торшер Arc" data-hotspot-title="Торшер Arc"
@@ -154,7 +166,7 @@
             <use xlink:href="images/sprite.svg#icon-plus"></use>
           </svg>
         </button>
-      
+
       </div>
     </section>
 
@@ -164,28 +176,29 @@
           <div class="about__gallery">
             <figure class="about__figure about__figure--main">
               <picture>
-                <source media="(max-width: 767px)" srcset="images/content/about-1-mobile.jpg">
-                <source media="(max-width: 1023px)" srcset="images/content/about-1-tablet.jpg">
-                <img class="about__image" src="images/content/about-1.jpg" srcset="images/content/about-1@2x.jpg 2x"
-                  alt="Уютный уголок гостиной с креслом и торшером" width="321" height="465">
+                <source media="(max-width: 767px)" srcset="images/content/about-1-mobile.webp">
+                <source media="(max-width: 1023px)" srcset="images/content/about-1-tablet.webp">
+                <img class="about__image" src="images/content/about-1.webp" srcset="images/content/about-1@2x.webp 2x"
+                  alt="Уютный уголок гостиной с креслом и торшером" width="321" height="465" loading="lazy"
+                  decoding="async">
               </picture>
               <figcaption class="about__caption about__caption--overlay">Уют для дома</figcaption>
             </figure>
             <figure class="about__figure about__figure--decor">
               <picture>
-                <source media="(max-width: 767px)" srcset="images/content/about-2-mobile.jpg">
-                <source media="(max-width: 1023px)" srcset="images/content/about-2-tablet.jpg">
-                <img class="about__image" src="images/content/about-2.jpg" srcset="images/content/about-2@2x.jpg 2x"
-                  alt="Декоративный вазон с растением" width="320" height="228">
+                <source media="(max-width: 767px)" srcset="images/content/about-2-mobile.webp">
+                <source media="(max-width: 1023px)" srcset="images/content/about-2-tablet.webp">
+                <img class="about__image" src="images/content/about-2.webp" srcset="images/content/about-2@2x.webp 2x"
+                  alt="Декоративный вазон с растением" width="320" height="228" loading="lazy" decoding="async">
               </picture>
               <figcaption class="about__caption about__caption--overlay">Декор для дома</figcaption>
             </figure>
             <figure class="about__figure about__figure--pets">
               <picture>
-                <source media="(max-width: 767px)" srcset="images/content/about-3-mobile.jpg">
-                <source media="(max-width: 1023px)" srcset="images/content/about-3-tablet.jpg">
-                <img class="about__image" src="images/content/about-3.jpg" srcset="images/content/about-3@2x.jpg 2x"
-                  alt="Кошка в плетёном лежаке" width="320" height="180">
+                <source media="(max-width: 767px)" srcset="images/content/about-3-mobile.webp">
+                <source media="(max-width: 1023px)" srcset="images/content/about-3-tablet.webp">
+                <img class="about__image" src="images/content/about-3.webp" srcset="images/content/about-3@2x.webp 2x"
+                  alt="Кошка в плетёном лежаке" width="320" height="180" loading="lazy" decoding="async">
               </picture>
               <figcaption class="about__caption about__caption--overlay">Мебель для животных</figcaption>
             </figure>
@@ -226,10 +239,11 @@
           <li class="popular__item">
             <a class="popular__link" href="#">
               <picture>
-                <source media="(max-width: 767px)" srcset="images/content/popular-sofas-mobile.jpg">
-                <source media="(max-width: 1023px)" srcset="images/content/popular-sofas-tablet.jpg">
-                <img class="popular__image" src="images/content/popular-sofas.jpg"
-                  srcset="images/content/popular-sofas@2x.jpg 2x" alt="Диваны" width="338" height="280">
+                <source media="(max-width: 767px)" srcset="images/content/popular-sofas-mobile.webp">
+                <source media="(max-width: 1023px)" srcset="images/content/popular-sofas-tablet.webp">
+                <img class="popular__image" src="images/content/popular-sofas.webp"
+                  srcset="images/content/popular-sofas@2x.webp 2x" alt="Диваны" width="338" height="280" loading="lazy"
+                  decoding="async">
               </picture>
               <span class="popular__name">Диваны</span>
             </a>
@@ -237,10 +251,11 @@
           <li class="popular__item">
             <a class="popular__link" href="#">
               <picture>
-                <source media="(max-width: 767px)" srcset="images/content/popular-tables-mobile.jpg">
-                <source media="(max-width: 1023px)" srcset="images/content/popular-tables-tablet.jpg">
-                <img class="popular__image" src="images/content/popular-tables.jpg"
-                  srcset="images/content/popular-tables@2x.jpg 2x" alt="Столы" width="338" height="280">
+                <source media="(max-width: 767px)" srcset="images/content/popular-tables-mobile.webp">
+                <source media="(max-width: 1023px)" srcset="images/content/popular-tables-tablet.webp">
+                <img class="popular__image" src="images/content/popular-tables.webp"
+                  srcset="images/content/popular-tables@2x.webp 2x" alt="Столы" width="338" height="280" loading="lazy"
+                  decoding="async">
               </picture>
               <span class="popular__name">Столы</span>
             </a>
@@ -248,10 +263,11 @@
           <li class="popular__item">
             <a class="popular__link" href="#">
               <picture>
-                <source media="(max-width: 767px)" srcset="images/content/popular-chairs-mobile.jpg">
-                <source media="(max-width: 1023px)" srcset="images/content/popular-chairs-tablet.jpg">
-                <img class="popular__image" src="images/content/popular-chairs.jpg"
-                  srcset="images/content/popular-chairs@2x.jpg 2x" alt="Стулья" width="338" height="280">
+                <source media="(max-width: 767px)" srcset="images/content/popular-chairs-mobile.webp">
+                <source media="(max-width: 1023px)" srcset="images/content/popular-chairs-tablet.webp">
+                <img class="popular__image" src="images/content/popular-chairs.webp"
+                  srcset="images/content/popular-chairs@2x.webp 2x" alt="Стулья" width="338" height="280" loading="lazy"
+                  decoding="async">
               </picture>
               <span class="popular__name">Стулья</span>
             </a>
@@ -259,10 +275,11 @@
           <li class="popular__item">
             <a class="popular__link" href="#">
               <picture>
-                <source media="(max-width: 767px)" srcset="images/content/popular-decor-mobile.jpg">
-                <source media="(max-width: 1023px)" srcset="images/content/popular-decor-tablet.jpg">
-                <img class="popular__image" src="images/content/popular-decor.jpg"
-                  srcset="images/content/popular-decor@2x.jpg 2x" alt="Home Decor" width="338" height="280">
+                <source media="(max-width: 767px)" srcset="images/content/popular-decor-mobile.webp">
+                <source media="(max-width: 1023px)" srcset="images/content/popular-decor-tablet.webp">
+                <img class="popular__image" src="images/content/popular-decor.webp"
+                  srcset="images/content/popular-decor@2x.webp 2x" alt="Home Decor" width="338" height="280"
+                  loading="lazy" decoding="async">
               </picture>
               <span class="popular__name">Home Decor</span>
             </a>
@@ -270,10 +287,11 @@
           <li class="popular__item">
             <a class="popular__link" href="#">
               <picture>
-                <source media="(max-width: 767px)" srcset="images/content/popular-beds-mobile.jpg">
-                <source media="(max-width: 1023px)" srcset="images/content/popular-beds-tablet.jpg">
-                <img class="popular__image" src="images/content/popular-beds.jpg"
-                  srcset="images/content/popular-beds@2x.jpg 2x" alt="Кровати" width="338" height="280">
+                <source media="(max-width: 767px)" srcset="images/content/popular-beds-mobile.webp">
+                <source media="(max-width: 1023px)" srcset="images/content/popular-beds-tablet.webp">
+                <img class="popular__image" src="images/content/popular-beds.webp"
+                  srcset="images/content/popular-beds@2x.webp 2x" alt="Кровати" width="338" height="280" loading="lazy"
+                  decoding="async">
               </picture>
               <span class="popular__name">Кровати</span>
             </a>
@@ -281,10 +299,11 @@
           <li class="popular__item">
             <a class="popular__link" href="#">
               <picture>
-                <source media="(max-width: 767px)" srcset="images/content/popular-armchairs-mobile.jpg">
-                <source media="(max-width: 1023px)" srcset="images/content/popular-armchairs-tablet.jpg">
-                <img class="popular__image" src="images/content/popular-armchairs.jpg"
-                  srcset="images/content/popular-armchairs@2x.jpg 2x" alt="Кресла" width="338" height="280">
+                <source media="(max-width: 767px)" srcset="images/content/popular-armchairs-mobile.webp">
+                <source media="(max-width: 1023px)" srcset="images/content/popular-armchairs-tablet.webp">
+                <img class="popular__image" src="images/content/popular-armchairs.webp"
+                  srcset="images/content/popular-armchairs@2x.webp 2x" alt="Кресла" width="338" height="280"
+                  loading="lazy" decoding="async">
               </picture>
               <span class="popular__name">Кресла</span>
             </a>
@@ -299,10 +318,11 @@
         <div class="interior__grid">
           <div class="interior__gallery">
             <picture>
-              <source media="(max-width: 767px)" srcset="images/content/interior-mobile.jpg">
-              <source media="(max-width: 1023px)" srcset="images/content/interior-tablet.jpg">
-              <img class="interior__image" src="images/content/interior.jpg" srcset="images/content/interior@2x.jpg 2x"
-                alt="Гостиная в зелёных тонах с креслом и комодом" width="900" height="748">
+              <source media="(max-width: 767px)" srcset="images/content/interior-mobile.webp">
+              <source media="(max-width: 1023px)" srcset="images/content/interior-tablet.webp">
+              <img class="interior__image" src="images/content/interior.webp"
+                srcset="images/content/interior@2x.webp 2x" alt="Гостиная в зелёных тонах с креслом и комодом"
+                width="900" height="748" loading="lazy" decoding="async">
             </picture>
 
             <button class="hotspot interior__hotspot" type="button" aria-haspopup="true" aria-expanded="false"
@@ -339,10 +359,11 @@
               <article class="product-card reveal">
                 <span class="product-card__image-wrapper">
                   <picture>
-                    <source media="(max-width: 767px)" srcset="images/content/product-chair-mobile.jpg">
-                    <source media="(max-width: 1023px)" srcset="images/content/product-chair-tablet.jpg">
-                    <img class="product-card__image" src="images/content/product-chair.jpg"
-                      srcset="images/content/product-chair@2x.jpg 2x" alt="Кресло Wood" width="212" height="240">
+                    <source media="(max-width: 767px)" srcset="images/content/product-chair-mobile.webp">
+                    <source media="(max-width: 1023px)" srcset="images/content/product-chair-tablet.webp">
+                    <img class="product-card__image" src="images/content/product-chair.webp"
+                      srcset="images/content/product-chair@2x.webp 2x" alt="Кресло Wood" width="212" height="240"
+                      loading="lazy" decoding="async">
                   </picture>
                 </span>
                 <h3 class="product-card__name">Кресло Wood</h3>
@@ -354,10 +375,11 @@
               <article class="product-card reveal">
                 <span class="product-card__image-wrapper">
                   <picture>
-                    <source media="(max-width: 767px)" srcset="images/content/product-lamp-mobile.jpg">
-                    <source media="(max-width: 1023px)" srcset="images/content/product-lamp-tablet.jpg">
-                    <img class="product-card__image" src="images/content/product-lamp.jpg"
-                      srcset="images/content/product-lamp@2x.jpg 2x" alt="Торшер Wood" width="212" height="240">
+                    <source media="(max-width: 767px)" srcset="images/content/product-lamp-mobile.webp">
+                    <source media="(max-width: 1023px)" srcset="images/content/product-lamp-tablet.webp">
+                    <img class="product-card__image" src="images/content/product-lamp.webp"
+                      srcset="images/content/product-lamp@2x.webp 2x" alt="Торшер Wood" width="212" height="240"
+                      loading="lazy" decoding="async">
                   </picture>
                 </span>
                 <h3 class="product-card__name">Торшер Wood</h3>
@@ -369,10 +391,11 @@
               <article class="product-card reveal">
                 <span class="product-card__image-wrapper">
                   <picture>
-                    <source media="(max-width: 767px)" srcset="images/content/product-chest-mobile.jpg">
-                    <source media="(max-width: 1023px)" srcset="images/content/product-chest-tablet.jpg">
-                    <img class="product-card__image" src="images/content/product-chest.jpg"
-                      srcset="images/content/product-chest@2x.jpg 2x" alt="Комод Wood" width="212" height="240">
+                    <source media="(max-width: 767px)" srcset="images/content/product-chest-mobile.webp">
+                    <source media="(max-width: 1023px)" srcset="images/content/product-chest-tablet.webp">
+                    <img class="product-card__image" src="images/content/product-chest.webp"
+                      srcset="images/content/product-chest@2x.webp 2x" alt="Комод Wood" width="212" height="240"
+                      loading="lazy" decoding="async">
                   </picture>
                 </span>
                 <h3 class="product-card__name">Комод Wood</h3>
@@ -384,10 +407,11 @@
               <article class="product-card reveal">
                 <span class="product-card__image-wrapper">
                   <picture>
-                    <source media="(max-width: 767px)" srcset="images/content/product-stool-mobile.jpg">
-                    <source media="(max-width: 1023px)" srcset="images/content/product-stool-tablet.jpg">
-                    <img class="product-card__image" src="images/content/product-stool.jpg"
-                      srcset="images/content/product-stool@2x.jpg 2x" alt="Тумба Wood" width="212" height="240">
+                    <source media="(max-width: 767px)" srcset="images/content/product-stool-mobile.webp">
+                    <source media="(max-width: 1023px)" srcset="images/content/product-stool-tablet.webp">
+                    <img class="product-card__image" src="images/content/product-stool.webp"
+                      srcset="images/content/product-stool@2x.webp 2x" alt="Тумба Wood" width="212" height="240"
+                      loading="lazy" decoding="async">
                   </picture>
                 </span>
                 <h3 class="product-card__name">Тумба Wood</h3>
@@ -528,8 +552,8 @@
     </div>
   </footer>
 
-  <div class="hotspot-popup" id="hotspot-popup" role="dialog" aria-modal="false"
-    aria-labelledby="hotspot-popup-title" hidden>
+  <div class="hotspot-popup" id="hotspot-popup" role="dialog" aria-modal="false" aria-labelledby="hotspot-popup-title"
+    hidden>
     <button class="hotspot-popup__close" type="button" aria-label="Закрыть подсказку">
       <svg width="14" height="14" aria-hidden="true">
         <use xlink:href="images/sprite.svg#icon-close"></use>
