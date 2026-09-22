@@ -7,13 +7,27 @@
 
 .theme-toggle {
   align-items: center;
+  background-color: transparent;
+  border: none;
   color: var(--color-text, #{$color-bokara-grey});
+  cursor: pointer;
   display: flex;
   flex-shrink: 0;
-  height: 40px;
+  height: 24px;
   justify-content: center;
+  padding: 0;
   position: relative;
-  width: 40px;
+  width: 24px;
+
+  @include vp-1023 {
+    height: 20px;
+    width: 20px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $color-moon-mist;
+  }
 
   &__icon {
     left: 50%;
@@ -21,6 +35,11 @@
     top: 50%;
     transform: translate(-50%, -50%);
     transition: opacity 0.2s ease, transform 0.2s ease;
+
+    @include vp-1023 {
+      height: 18px;
+      width: 18px;
+    }
 
     &--moon {
       opacity: 0;

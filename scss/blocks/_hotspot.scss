@@ -1,6 +1,6 @@
 .hotspot {
   align-items: center;
-  background-color: $color-white;
+  background-color: var(--color-surface, #{$color-white});
   border-radius: 50%;
   cursor: pointer;
   display: flex;
@@ -20,7 +20,7 @@
   }
 
   &__icon {
-    color: $color-bokara-grey;
+    color: var(--color-text, #{$color-bokara-grey});
     height: 20px;
     width: 20px;
 

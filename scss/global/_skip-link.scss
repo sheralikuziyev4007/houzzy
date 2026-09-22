@@ -5,9 +5,9 @@
 // ------------------------------------------------------------
 
 .skip-link {
-  background-color: $color-white;
+  background-color: var(--color-surface, #{$color-white});
   border-radius: 0 0 6px 0;
-  color: $color-bokara-grey;
+  color: var(--color-text, #{$color-bokara-grey});
   font-family: $ff-mulish;
   font-size: 14px;
   font-weight: 600;
@@ -20,7 +20,7 @@
   z-index: 999;
 
   &:focus {
-    outline: 2px solid $color-bokara-grey;
+    outline: 2px solid var(--color-text, #{$color-bokara-grey});
     outline-offset: -2px;
     transform: translateY(0);
   }

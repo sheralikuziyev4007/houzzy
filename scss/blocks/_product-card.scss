@@ -21,7 +21,7 @@
 
   &__image-wrapper {
 
-    background-color: $color-alto;
+    background-color: var(--color-surface-muted, #{$color-alto});
     display: block;
     margin-bottom: 20px;
     overflow: hidden;
@@ -43,7 +43,7 @@
   }
 
   &__name {
-    color: $color-bokara-grey;
+    color: var(--color-text, #{$color-bokara-grey});
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
@@ -57,7 +57,7 @@
   }
 
   &__price {
-    color: $color-bokara-grey;
+    color: var(--color-text, #{$color-bokara-grey});
     font-size: 14px;
     line-height: 20px;
     margin: 0 0 7px;

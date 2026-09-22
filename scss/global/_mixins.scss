@@ -34,8 +34,8 @@
   @if $bg == transparent {
     &:hover,
     &:focus-visible {
-      background-color: $color-loafer;
-      border-color: $color-loafer;
+      background-color: var(--color-surface-muted, #{$color-loafer});
+      border-color: var(--color-surface-muted, #{$color-loafer});
     }
   } @else {
     &:hover,

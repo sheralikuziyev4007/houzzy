@@ -1,8 +1,8 @@
 .badge {
   align-items: center;
-  background-color: $color-loafer;
+  background-color: var(--color-surface-muted, #{$color-loafer});
   border-radius: 50%;
-  color: $color-bokara-grey;
+  color: var(--color-text, #{$color-bokara-grey});
   display: flex;
   font-size: 10px;
   font-weight: 700;

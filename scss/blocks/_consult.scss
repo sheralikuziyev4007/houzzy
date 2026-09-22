@@ -1,5 +1,5 @@
 .consult {
-  background-color: $color-loafer;
+  background-color: var(--color-surface-muted, #{$color-loafer});
   padding: 50px;
   text-align: center;
 
@@ -25,7 +25,7 @@
   }
 
   &__subtitle {
-    color: $color-bokara-grey;
+    color: var(--color-text, #{$color-bokara-grey});
     font-size: 16px;
     line-height: 20px;
     margin: 0 0 44px;
@@ -90,7 +90,7 @@
   }
 
   &__note {
-    color: $color-loafer-dark;
+    color: var(--color-text-muted, #{$color-loafer-dark});
     font-size: 12px;
     line-height: 16px;
     margin: 0;
@@ -102,12 +102,12 @@
   }
 
   &__note-link {
-    color: $color-loafer-dark;
+    color: var(--color-text-muted, #{$color-loafer-dark});
     text-decoration: underline;
 
     &:hover,
     &:focus-visible {
-      color: $color-bokara-grey;
+      color: var(--color-text, #{$color-bokara-grey});
     }
   }
 }

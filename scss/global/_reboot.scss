@@ -47,7 +47,7 @@ img {
 }
 
 a {
-  color: $color-bokara-grey;
+  color: var(--color-text, #{$color-bokara-grey});
   text-decoration: none;
 }
 

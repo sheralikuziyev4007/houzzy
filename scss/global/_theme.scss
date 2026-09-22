@@ -12,17 +12,25 @@
 :root {
   --color-bg: #{$color-hint-of-red};
   --color-surface: #{$color-white};
+  --color-surface-muted: #{$color-loafer};
   --color-text: #{$color-bokara-grey};
   --color-text-muted: #{$color-loafer-dark};
+  --color-text-faint: #{$color-cloudy};
+  --color-text-40: #{$color-bokara-grey-40};
   --color-border: #{$color-swiss-coffee};
+  --color-shadow: #{$color-bokara-grey-40};
 }
 
 [data-theme="dark"] {
   --color-bg: #17150f;
   --color-surface: #232019;
+  --color-surface-muted: #2a2620;
   --color-text: #f4f3f2;
   --color-text-muted: #aea29a;
+  --color-text-faint: #766f67;
+  --color-text-40: rgba(244, 243, 242, 0.4);
   --color-border: #3a3630;
+  --color-shadow: rgba(0, 0, 0, 0.55);
 }
 
 // Плавный переход между темами вместо резкого скачка цвета

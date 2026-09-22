@@ -4,7 +4,7 @@
   flex-wrap: wrap;
 
   @include vp-1023 {
-    background-color: $color-hint-of-red;
+    background-color: var(--color-bg, #{$color-hint-of-red});
     display: none;
     flex-direction: column;
     height: calc(100vh - 72px);
@@ -24,7 +24,7 @@
   }
 
   &__watermark {
-    color: $color-swiss-coffee;
+    color: var(--color-border, #{$color-swiss-coffee});
     display: none;
     font-size: 220px;
     font-weight: 700;
@@ -82,7 +82,7 @@
 
     &:hover,
     &:focus-visible {
-      color: $color-cloudy;
+      color: var(--color-text-faint, #{$color-cloudy});
     }
   }
 
@@ -91,7 +91,7 @@
 
     @include vp-1023 {
       align-items: center;
-      color: $color-loafer-dark;
+      color: var(--color-text-muted, #{$color-loafer-dark});
       display: flex;
       font-size: 16px;
       font-weight: 500;
@@ -101,7 +101,7 @@
 
     &:hover,
     &:focus-visible {
-      color: $color-bokara-grey;
+      color: var(--color-text, #{$color-bokara-grey});
     }
   }
 

@@ -93,7 +93,7 @@
   }
 
   &__burger {
-    color: $color-bokara-grey;
+    color: var(--color-text, #{$color-bokara-grey});
     height: 24px;
     left: 0;
     pointer-events: none;
@@ -109,7 +109,6 @@
   &__user-list {
     display: flex;
     flex-shrink: 0;
-    flex-wrap: wrap;
     gap: 10px 20px;
     justify-content: flex-end;
     list-style: none;
@@ -141,7 +140,7 @@
     align-items: center;
     background-color: transparent;
     border: none;
-    color: $color-bokara-grey;
+    color: var(--color-text, #{$color-bokara-grey});
     cursor: pointer;
     display: flex;
     flex-shrink: 0;

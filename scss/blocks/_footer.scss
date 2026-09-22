@@ -23,7 +23,7 @@
       position: absolute;
       width: 100vw;
       height: 1px;
-      background-color: $color-swiss-coffee;
+      background-color: var(--color-border, #{$color-swiss-coffee});
       top: 0;
       left: 50%;
       transform: translateX(-50%);
@@ -34,7 +34,7 @@
       position: absolute;
       width: 100vw;
       height: 1px;
-      background-color: $color-swiss-coffee;
+      background-color: var(--color-border, #{$color-swiss-coffee});
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
@@ -112,7 +112,7 @@
 
     &:hover,
     &:focus-visible {
-      color: $color-cloudy;
+      color: var(--color-text-faint, #{$color-cloudy});
     }
   }
 
@@ -170,7 +170,7 @@
   &__link {
     &:hover,
     &:focus-visible {
-      color: $color-cloudy;
+      color: var(--color-text-faint, #{$color-cloudy});
     }
   }
 
@@ -209,7 +209,7 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 16px;
-    color: $color-bokara-grey-40;
+    color: var(--color-text-40, #{$color-bokara-grey-40});
     text-align: center;
 
     @include vp-767 {
@@ -223,7 +223,7 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 16px;
-    color: $color-bokara-grey-40;
+    color: var(--color-text-40, #{$color-bokara-grey-40});
     text-align: center;
 
     @include vp-1023 {

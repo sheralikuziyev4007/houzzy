@@ -21,7 +21,7 @@
 
 // Кнопка светлая (контурная)
 .button-secondary {
-  @include button-variant(transparent, $color-bokara-grey, $color-swiss-coffee);
+  @include button-variant(transparent, var(--color-text, #{$color-bokara-grey}), var(--color-border, #{$color-swiss-coffee}));
   align-items: center;
   cursor: pointer;
   display: inline-flex;

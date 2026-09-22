@@ -5,7 +5,7 @@
   text-align: left;
 
   &__label {
-    color: $color-loafer-dark;
+    color: var(--color-text-muted, #{$color-loafer-dark});
     font-size: 14px;
     line-height: 18px;
 
@@ -19,7 +19,7 @@
 
   &__input {
     background-color: transparent;
-    border: 1px solid $color-mercury;
+    border: 1px solid var(--color-text, #{$color-mercury});
     color: var(--color-text, #{$color-bokara-grey});
     font-family: $ff-mulish;
     font-size: 16px;
@@ -37,16 +37,16 @@
     }
 
     &::placeholder {
-      color: $color-cloudy;
+      color: var(--color-text-faint, #{$color-cloudy});
     }
 
     &:hover {
-      border-color: $color-bokara-grey;
+      border-color: var(--color-text, #{$color-bokara-grey});
     }
 
     &:focus-visible {
-      border-color: $color-bokara-grey;
-      outline: 2px solid $color-bokara-grey;
+      border-color: var(--color-text, #{$color-bokara-grey});
+      outline: 2px solid var(--color-text, #{$color-bokara-grey});
       outline-offset: 2px;
     }
   }
